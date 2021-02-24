@@ -1,0 +1,3 @@
+C:/Users/Ana/ClionProjects/Module_014/002_Tic_Tac_Toe/cmake-build-debug/CMakeFiles/002_Tic_Tac_Toe.dir
+C:/Users/Ana/ClionProjects/Module_014/002_Tic_Tac_Toe/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Ana/ClionProjects/Module_014/002_Tic_Tac_Toe/cmake-build-debug/CMakeFiles/rebuild_cache.dir
