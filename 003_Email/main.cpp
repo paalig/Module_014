@@ -38,6 +38,10 @@ bool CheckSymbol(std::string str) {
         if (countA > 1) {
             return false;
         }
+        //@ не первый и не последний символ
+        if (str[0] == '@' || str[str.size() - 1] == '@') {
+            return false;
+        }
         // A-Z, a-z, 0-9, ".", "-", @
         if ((!(str[i] >= 'a' && str[i] <= 'z') && !(str[i] >= 'A' && str[i] <= 'Z') &&
             !(str[i] >= '0' && str[i] <= '9') && str[i] != '-' && str[i] != '.') && str[i] != '@') {
@@ -59,16 +63,17 @@ bool CheckSymbol(std::string str) {
             }
         }
     }
-    //точки
+    //точка не первый и не последний символ
     if (str[0] == '.' || str[str.size() - 1] == '.') {
         return false;
     }
+    //2 точки не идут подряд
     for (int i = 0; i < (str.size() - 1); i++) {
         if (str[i] == str[i + 1] && str[i] == '.') {
             return false;
         }
     }
-    //есть @ в адресе
+    //есть хоть одна @ в адресе
     if (countA < 1) {
         return false;
     }
