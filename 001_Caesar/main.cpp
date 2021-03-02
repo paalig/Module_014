@@ -27,17 +27,29 @@ std::string EncryptCaesar(std::string str, int a) {
     for (int i = 0; i < str.size(); i++) {
         if (str[i] >= 'a' && str[i] <= 'z') {
             if (str[i] + a > 'z') {
-                str[i] += a - 26;
+                str[i] += a % 26;
+                while (!(str[i] >= 'a' && str[i] <= 'z')) {
+                    str[i] -= 26;
+                }
             } else if (str[i] + a < 'a') {
-                str[i] += a + 26;
+                str[i] += a % 26;
+                while (!(str[i] >= 'a' && str[i] <= 'z')) {
+                    str[i] += 26;
+                }
             } else {
                 str[i] += a;
             }
         } else if (str[i] >= 'A' && str[i] <= 'Z') {
             if (str[i] + a > 'Z') {
-                str[i] += a - 26;
+                str[i] += a % 26;
+                while (!(str[i] >= 'A' && str[i] <= 'Z')) {
+                    str[i] -= 26;
+                }
             } else if (str[i] + a < 'A') {
-                str[i] += a + 26;
+                str[i] += a % 26;
+                while (!(str[i] >= 'A' && str[i] <= 'Z')) {
+                    str[i] += 26;
+                }
             } else {
                 str[i] += a;
             }
